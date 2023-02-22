@@ -1,5 +1,6 @@
 from selenium.webdriver import ChromeOptions, Chrome
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
 
 opts = ChromeOptions()
 opts.add_experimental_option("detach", True)
@@ -11,3 +12,4 @@ print(pageTitle)
 alertButton=driver.find_element(By.XPATH, "//button[text()='Click Me']")
 alertButton.click()
 driver.switch_to.alert.accept()
+action= ActionChains(driver)
